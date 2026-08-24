@@ -1,433 +1,824 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabiola Zepeda | Servicios Jurídicos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>Fabiola Zepeda | Servicios Jurídicos</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-            background: #f8f8f8;
-            line-height: 1.6;
-        }
+<meta name="description" content="Fabiola Zepeda | Servicios Jurídicos. Asesoría y atención jurídica en Ciudad de México y Zona Metropolitana.">
 
-        header {
-            background: #071a3d;
-            color: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #c9a227;
-        }
+<style>
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #d4af37;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 22px;
-            font-size: 15px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        nav a:hover {
-            color: #d4af37;
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:#f7f7f7;
+    line-height:1.6;
+}
 
-        .hero {
-            min-height: 600px;
-            background: linear-gradient(rgba(4, 20, 48, .88), rgba(4, 20, 48, .88));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 70px 20px;
-            color: white;
-        }
+/* COLORES */
+:root{
+    --azul:#071b41;
+    --azul2:#0d2c61;
+    --dorado:#d4af37;
+    --dorado2:#b8921f;
+    --blanco:#ffffff;
+}
 
-        .hero-content {
-            max-width: 900px;
-        }
+/* HEADER */
 
-        .photo {
-            width: 190px;
-            height: 190px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #d4af37;
-            margin-bottom: 25px;
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,27,65,.98);
+    border-bottom:2px solid var(--dorado);
+    padding:15px 7%;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .hero h2 {
-            font-size: 25px;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
+.logo-text{
+    color:var(--dorado);
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:15px;
+    transition:.3s;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: #d4af37;
-            color: #071a3d;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: .3s;
-        }
+nav a:hover{
+    color:var(--dorado);
+}
 
-        .btn:hover {
-            background: white;
-        }
+/* HERO */
 
-        section {
-            padding: 70px 8%;
-        }
+.hero{
+    min-height:680px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:80px 20px;
+    background:
+        linear-gradient(rgba(4,18,43,.91),rgba(7,27,65,.94));
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+.hero-content{
+    max-width:900px;
+}
 
-        .section-title h2 {
-            font-size: 34px;
-            color: #071a3d;
-        }
+.profile-photo{
+    width:210px;
+    height:210px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid var(--dorado);
+    padding:4px;
+    background:white;
+    box-shadow:0 0 35px rgba(212,175,55,.35);
+    margin-bottom:25px;
+}
 
-        .section-title span {
-            display: block;
-            width: 70px;
-            height: 3px;
-            background: #d4af37;
-            margin: 12px auto;
-        }
+.hero h1{
+    font-size:52px;
+    color:var(--dorado);
+    letter-spacing:1px;
+    margin-bottom:5px;
+}
 
-        .about {
-            background: white;
-            text-align: center;
-        }
+.hero h2{
+    font-size:27px;
+    font-weight:normal;
+    margin-bottom:20px;
+}
 
-        .about p {
-            max-width: 850px;
-            margin: auto;
-            font-size: 17px;
-        }
+.hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:19px;
+    color:#f1f1f1;
+}
 
-        .services {
-            background: #f2f3f5;
-        }
+.hero-buttons{
+    margin-top:35px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    margin:7px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        .card {
-            background: white;
-            padding: 30px 25px;
-            text-align: center;
-            border-radius: 10px;
-            border-top: 4px solid #d4af37;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
-            transition: .3s;
-        }
+.btn-gold{
+    background:var(--dorado);
+    color:var(--azul);
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+.btn-gold:hover{
+    background:white;
+    transform:translateY(-2px);
+}
 
-        .card .icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
+.btn-outline{
+    border:2px solid var(--dorado);
+    color:white;
+}
 
-        .card h3 {
-            color: #071a3d;
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
+.btn-outline:hover{
+    background:var(--dorado);
+    color:var(--azul);
+}
 
-        .contact {
-            background: #071a3d;
-            color: white;
-            text-align: center;
-        }
+/* SECCIONES */
 
-        .contact h2 {
-            color: #d4af37;
-            font-size: 34px;
-        }
+section{
+    padding:80px 7%;
+}
 
-        .contact-info {
-            margin-top: 30px;
-            font-size: 18px;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
 
-        .contact-info p {
-            margin: 12px 0;
-        }
+.section-title h2{
+    color:var(--azul);
+    font-size:36px;
+}
 
-        .social-buttons {
-            margin-top: 30px;
-        }
+.section-line{
+    width:75px;
+    height:3px;
+    background:var(--dorado);
+    margin:12px auto;
+}
 
-        .social-buttons a {
-            display: inline-block;
-            margin: 8px;
-            padding: 13px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* SOBRE MI */
 
-        .whatsapp {
-            background: #25D366;
-            color: white;
-        }
+.about{
+    background:white;
+}
 
-        .facebook {
-            background: #1877F2;
-            color: white;
-        }
+.about-container{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
 
-        footer {
-            background: #040f25;
-            color: white;
-            text-align: center;
-            padding: 22px;
-            font-size: 14px;
-        }
+.about-container p{
+    font-size:17px;
+    margin-bottom:18px;
+}
 
-        footer span {
-            color: #d4af37;
-        }
+/* SERVICIOS */
 
-        @media (max-width: 700px) {
+.services{
+    background:#f1f2f4;
+}
 
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
+.cards{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
 
-            nav a {
-                margin: 0 7px;
-                font-size: 13px;
-            }
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:12px;
+    text-align:center;
+    border-top:4px solid var(--dorado);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-            .hero h1 {
-                font-size: 34px;
-            }
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 30px rgba(0,0,0,.13);
+}
 
-            .hero h2 {
-                font-size: 20px;
-            }
+.card-icon{
+    font-size:43px;
+    margin-bottom:15px;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+.card h3{
+    color:var(--azul);
+    font-size:22px;
+    margin-bottom:12px;
+}
 
-            section {
-                padding: 55px 6%;
-            }
+.card p{
+    color:#555;
+    font-size:15px;
+}
 
-            .section-title h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
+/* POR QUE ELEGIR */
+
+.why{
+    background:white;
+}
+
+.why-container{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.why-box{
+    padding:30px;
+    text-align:center;
+    background:#fafafa;
+    border-radius:10px;
+}
+
+.why-box h3{
+    color:var(--azul);
+    margin:12px 0;
+}
+
+.why-number{
+    width:55px;
+    height:55px;
+    line-height:55px;
+    margin:auto;
+    border-radius:50%;
+    background:var(--dorado);
+    color:var(--azul);
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* CONTACTO */
+
+.contact{
+    background:var(--azul);
+    color:white;
+    text-align:center;
+}
+
+.contact .section-title h2{
+    color:var(--dorado);
+}
+
+.contact-text{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.contact-info{
+    max-width:650px;
+    margin:25px auto;
+}
+
+.contact-item{
+    margin:15px 0;
+    font-size:17px;
+}
+
+.contact-item strong{
+    color:var(--dorado);
+}
+
+.contact-buttons{
+    margin-top:30px;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.facebook{
+    background:#1877F2;
+    color:white;
+}
+
+.email{
+    background:white;
+    color:var(--azul);
+}
+
+/* AVISO */
+
+.privacy{
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.privacy p{
+    max-width:850px;
+    margin:auto;
+    color:#666;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#030d22;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+}
+
+footer span{
+    color:var(--dorado);
+}
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp-float{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:29px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    z-index:2000;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:750px){
+
+    header{
+        padding:13px 5%;
+    }
+
+    .nav-container{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:620px;
+        padding:70px 20px;
+    }
+
+    .profile-photo{
+        width:175px;
+        height:175px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">FABIOLA ZEPEDA</div>
+<!-- MENU -->
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<header>
+
+<div class="nav-container">
+
+<div class="logo-text">
+FABIOLA ZEPEDA
+</div>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#sobre-mi">Sobre mí</a>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</div>
+
 </header>
+
+
+<!-- PORTADA -->
 
 <section class="hero" id="inicio">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <img src="fabiola.jpg.png"
-             alt="Fabiola Zepeda - Servicios Jurídicos"
-             class="photo">
+<img
+src="fabiola.jpg.png"
+alt="Fabiola Zepeda | Servicios Jurídicos"
+class="profile-photo"
+>
 
-        <h1>Fabiola Zepeda</h1>
+<h1>Fabiola Zepeda</h1>
 
-        <h2>Servicios Jurídicos</h2>
+<h2>Servicios Jurídicos</h2>
 
-        <p>
-            Asesoría y representación jurídica profesional,
-            responsable y cercana a las necesidades de cada cliente.
-        </p>
+<p>
+Asesoría y atención jurídica profesional, personalizada
+y comprometida con las necesidades de cada cliente.
+</p>
 
-        <a class="btn"
-           href="https://wa.me/525562388538"
-           target="_blank">
-            Solicitar consulta
-        </a>
+<div class="hero-buttons">
 
-    </div>
+<a
+class="btn btn-gold"
+href="https://wa.me/525562388538"
+target="_blank"
+>
+Solicitar consulta
+</a>
+
+<a
+class="btn btn-outline"
+href="#servicios"
+>
+Conocer servicios
+</a>
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- SOBRE MI -->
 
 <section class="about" id="sobre-mi">
 
-    <div class="section-title">
-        <h2>Sobre mí</h2>
-        <span></span>
-    </div>
+<div class="section-title">
 
-    <p>
-        Soy Fabiola Zepeda, profesional del Derecho comprometida
-        con brindar atención jurídica personalizada, responsable
-        y enfocada en encontrar soluciones legales adecuadas para
-        cada caso.
-    </p>
+<h2>Sobre mí</h2>
 
-    <p style="margin-top:20px;">
-        Mi objetivo es proporcionar orientación clara y acompañamiento
-        durante las distintas etapas de cada procedimiento jurídico.
-    </p>
+<div class="section-line"></div>
+
+</div>
+
+<div class="about-container">
+
+<p>
+Soy Fabiola Zepeda, profesional del Derecho comprometida
+con brindar atención jurídica responsable, cercana y
+personalizada.
+</p>
+
+<p>
+Mi objetivo es proporcionar orientación clara y acompañamiento
+jurídico durante las distintas etapas de cada asunto, buscando
+alternativas legales acordes con las necesidades de cada cliente.
+</p>
+
+<p>
+Atención en Ciudad de México y Zona Metropolitana.
+</p>
+
+</div>
 
 </section>
+
+
+<!-- SERVICIOS -->
 
 <section class="services" id="servicios">
 
-    <div class="section-title">
-        <h2>Servicios Jurídicos</h2>
-        <span></span>
-    </div>
+<div class="section-title">
 
-    <div class="cards">
+<h2>Áreas de atención</h2>
 
-        <div class="card">
-            <div class="icon">⚖️</div>
-            <h3>Derecho Civil</h3>
-            <p>
-                Asesoría y representación en asuntos civiles,
-                contratos, obligaciones y controversias entre particulares.
-            </p>
-        </div>
+<div class="section-line"></div>
 
-        <div class="card">
-            <div class="icon">👨‍👩‍👧</div>
-            <h3>Derecho Familiar</h3>
-            <p>
-                Atención en divorcios, pensiones alimenticias,
-                guarda y custodia y demás asuntos familiares.
-            </p>
-        </div>
+</div>
 
-        <div class="card">
-            <div class="icon">⚖️</div>
-            <h3>Derecho Penal</h3>
-            <p>
-                Orientación y acompañamiento jurídico en asuntos
-                relacionados con materia penal.
-            </p>
-        </div>
 
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>Juicio de Amparo</h3>
-            <p>
-                Asesoría jurídica relacionada con la protección
-                de derechos mediante el juicio de amparo.
-            </p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <div class="icon">📄</div>
-            <h3>Servicios Legales</h3>
-            <p>
-                Elaboración y revisión de documentos jurídicos,
-                contratos, escritos y asesoría legal personalizada.
-            </p>
-        </div>
 
-    </div>
+<div class="card">
+
+<div class="card-icon">⚖️</div>
+
+<h3>Derecho Civil</h3>
+
+<p>
+Asesoría y atención en asuntos civiles, contratos,
+obligaciones, convenios y controversias entre particulares.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">👨‍👩‍👧</div>
+
+<h3>Derecho Familiar</h3>
+
+<p>
+Atención en divorcios, pensiones alimenticias,
+guarda y custodia y otros asuntos relacionados
+con el derecho familiar.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">⚖️</div>
+
+<h3>Derecho Penal</h3>
+
+<p>
+Orientación y acompañamiento jurídico en asuntos
+relacionados con materia penal.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📚</div>
+
+<h3>Juicio de Amparo</h3>
+
+<p>
+Asesoría y atención jurídica relacionada con
+el juicio de amparo y la protección de derechos.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📄</div>
+
+<h3>Servicios Legales</h3>
+
+<p>
+Elaboración y revisión de contratos, escritos,
+convenios y documentos jurídicos, así como
+asesoría legal personalizada.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
+
+
+<!-- POR QUE ELEGIR -->
+
+<section class="why">
+
+<div class="section-title">
+
+<h2>¿Por qué elegir mis servicios?</h2>
+
+<div class="section-line"></div>
+
+</div>
+
+
+<div class="why-container">
+
+
+<div class="why-box">
+
+<div class="why-number">01</div>
+
+<h3>Atención personalizada</h3>
+
+<p>
+Cada asunto es atendido de manera individual,
+considerando sus circunstancias particulares.
+</p>
+
+</div>
+
+
+<div class="why-box">
+
+<div class="why-number">02</div>
+
+<h3>Orientación clara</h3>
+
+<p>
+Explicación comprensible de las alternativas
+y procedimientos jurídicos aplicables.
+</p>
+
+</div>
+
+
+<div class="why-box">
+
+<div class="why-number">03</div>
+
+<h3>Compromiso profesional</h3>
+
+<p>
+Atención responsable y seguimiento de cada
+asunto conforme a sus necesidades.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
 
 <section class="contact" id="contacto">
 
-    <div class="section-title">
-        <h2 style="color:#d4af37;">Contacto</h2>
-        <span></span>
-    </div>
+<div class="section-title">
 
-    <div class="contact-info">
+<h2>Solicita una consulta</h2>
 
-        <p>📍 Ciudad de México y Zona Metropolitana</p>
+<div class="section-line"></div>
 
-        <p>📱 55 6238 8538</p>
+</div>
 
-        <p>✉️ abogadafabiola2@gmail.com</p>
+<p class="contact-text">
+Estoy disponible para atender tu consulta y orientarte
+sobre las alternativas legales de tu caso.
+</p>
 
-    </div>
 
-    <div class="social-buttons">
+<div class="contact-info">
 
-        <a class="whatsapp"
-           href="https://wa.me/525562388538"
-           target="_blank">
-            WhatsApp
-        </a>
+<div class="contact-item">
+<strong>📍 Ubicación:</strong>
+Ciudad de México y Zona Metropolitana
+</div>
 
-        <a class="facebook"
-           href="https://www.facebook.com/share/1BhFKY79G9/"
-           target="_blank">
-            Facebook
-        </a>
+<div class="contact-item">
+<strong>📱 Teléfono:</strong>
+55 6238 8538
+</div>
 
-    </div>
+<div class="contact-item">
+<strong>✉️ Correo:</strong>
+abogadafabiola2@gmail.com
+</div>
+
+</div>
+
+
+<div class="contact-buttons">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/525562388538"
+target="_blank"
+>
+WhatsApp
+</a>
+
+
+<a
+class="btn facebook"
+href="https://www.facebook.com/share/1BhFKY79G9/"
+target="_blank"
+>
+Facebook
+</a>
+
+
+<a
+class="btn email"
+href="mailto:abogadafabiola2@gmail.com"
+>
+Enviar correo
+</a>
+
+</div>
 
 </section>
 
+
+<!-- AVISO -->
+
+<section class="privacy">
+
+<div class="section-title">
+
+<h2>Aviso de privacidad</h2>
+
+<div class="section-line"></div>
+
+</div>
+
+<p>
+La información proporcionada a través de los medios de contacto
+de este sitio será utilizada únicamente para atender solicitudes
+de información y consultas jurídicas. La comunicación a través
+de este sitio no constituye por sí misma la aceptación de un
+encargo profesional.
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
 
-    © 2026 <span>Fabiola Zepeda | Servicios Jurídicos</span>
-    <br>
-    Todos los derechos reservados.
+© 2026
+<span>Fabiola Zepeda | Servicios Jurídicos</span>
+
+<br>
+
+Ciudad de México y Zona Metropolitana
 
 </footer>
+
+
+<!-- WHATSAPP FLOTANTE -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/525562388538"
+target="_blank"
+aria-label="Contactar por WhatsApp"
+>
+💬
+</a>
+
 
 </body>
 </html>
